@@ -14,6 +14,7 @@ import com.spring.basic.service.MovieService;
  * @apiNote 30-01-2023
  *
  */
+
 @RestController
 @RequestMapping("/movie")
 public class MovieController {
