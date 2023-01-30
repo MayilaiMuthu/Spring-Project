@@ -1,9 +1,0 @@
-# @author MayilaiMuthu
-# @apiNote 30-01-2023
-
-#Server-Config
-
-server:
-   port: 7072
-   servlet:
-      context-path: /api
