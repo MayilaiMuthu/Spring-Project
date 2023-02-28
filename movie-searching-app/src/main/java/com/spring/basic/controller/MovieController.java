@@ -18,22 +18,24 @@ import com.spring.basic.service.MovieService;
 @RestController
 @RequestMapping("/movie")
 public class MovieController {
-	
-    @Autowired
-    MovieService movieService;
-    
-    @GetMapping("/check")
-    public String homeController(){
-        return "moviedetails";
-    }
 
-    @GetMapping("/search")
-    public String getMovieByName(@RequestParam String title, Model model) {
-        try {
+	@Autowired
+	MovieService movieService;
+
+	@GetMapping("/check")
+	public String homeController() {
+		return "moviedetails";
+	}
+
+	// http://localhost:7072/api/moviedetails.html?title=key
+
+	@GetMapping("/search")
+	public String getMovieByName(@RequestParam String title, Model model) {
+		try {
 			model.addAttribute("movies", movieService.getMovieByName(title));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-        return "moviedetails";
-    }
+		return "moviedetails";
+	}
 }
