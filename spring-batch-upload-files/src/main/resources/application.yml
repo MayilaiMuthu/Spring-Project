@@ -1,0 +1,33 @@
+#/** * @author MayilaiMuthu * @apiNote 04-03-2023 **/
+
+#Data Source Config
+
+spring:
+   datasource:
+       driver-class-name: com.mysql.cj.jdbc.Driver
+       url: jdbc:mysql://localhost/muthu
+       username: root
+       password: root
+       
+#Console Config
+
+#   h2:
+#    console:
+#      enabled: true  
+       
+#JPA Config
+
+   jpa:
+      show-sql: true
+      hibernate:
+         ddl-auto: update
+      properties:
+         hibernate:
+             dialect: org.hibernate.dialect.MySQL5Dialect
+             
+#Server Config             
+
+server:
+    port: 7072
+    servlet:
+      context-path: /api
