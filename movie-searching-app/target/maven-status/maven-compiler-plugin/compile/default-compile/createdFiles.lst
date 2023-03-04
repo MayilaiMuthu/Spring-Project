@@ -1,0 +1,5 @@
+com\spring\basic\MovieSearchingAppApplication.class
+com\spring\basic\controller\MovieController.class
+com\spring\basic\ServletInitializer.class
+com\spring\basic\dto\Movie.class
+com\spring\basic\service\MovieService.class
