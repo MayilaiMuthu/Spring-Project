@@ -6,6 +6,27 @@
 	},
 	"item": [
 		{
+			"name": "Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7072/api/spring-batch/csv-import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7072",
+					"path": [
+						"api",
+						"spring-batch",
+						"csv-import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Health_Check",
 			"request": {
 				"method": "GET",

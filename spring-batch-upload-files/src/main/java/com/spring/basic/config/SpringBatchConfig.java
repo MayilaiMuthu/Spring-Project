@@ -14,6 +14,8 @@ import org.springframework.batch.item.file.transform.DelimitedLineTokenizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.task.SimpleAsyncTaskExecutor;
+import org.springframework.core.task.TaskExecutor;
 
 import com.spring.basic.entity.Customer;
 import com.spring.basic.repository.CustomerRepository;
@@ -50,7 +52,6 @@ public class SpringBatchConfig {
 		DefaultLineMapper<Customer> lineMapper = new DefaultLineMapper<>();
 		DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
 		lineTokenizer.setDelimiter(",");
-		lineTokenizer.setNames("");
 		lineTokenizer.setNames("id", "firstName", "lastName", "email", "gender", "contactNo", "country", "dob");
 		lineTokenizer.setStrict(false);
 		lineMapper.setLineTokenizer(lineTokenizer);
@@ -76,7 +77,7 @@ public class SpringBatchConfig {
 	@Bean
 	public Step step1() {
 		return stepBuilderFactory.get("csv-file").<Customer, Customer>chunk(10).reader(reader()).processor(processor())
-				.writer(writter()).build();
+				.writer(writter()).taskExecutor(taskExecutor()).build();
 	}
 
 	@Bean
@@ -84,6 +85,14 @@ public class SpringBatchConfig {
 		return jobBuilderFactory.get("customer").flow(step1())
 //				.next(step())
 				.end().build();
+	}
+
+	@Bean
+	public TaskExecutor taskExecutor() {
+		SimpleAsyncTaskExecutor executor = new SimpleAsyncTaskExecutor();
+		// executor.setConcurrencyLimit(100); //this is a thread to insert multiple
+		// lines at a time but not order in id
+		return executor;
 	}
 
 }

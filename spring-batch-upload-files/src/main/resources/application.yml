@@ -1,15 +1,22 @@
 #/** * @author MayilaiMuthu * @apiNote 04-03-2023 **/
 
 #Data Source Config
-
+#disabled job run at startup   
 spring:
+   batch:
+       jdbc:
+          initialize-schema: ALWAYS
+       job:
+         enabled: false
    datasource:
        driver-class-name: com.mysql.cj.jdbc.Driver
-       url: jdbc:mysql://localhost/muthu
+       url: jdbc:mysql://localhost/springbatch
        username: root
        password: root
        
 #Console Config
+
+#spring.batch.initialize-schema=ALWAYS
 
 #   h2:
 #    console:
@@ -31,3 +38,5 @@ server:
     port: 7072
     servlet:
       context-path: /api
+
+  

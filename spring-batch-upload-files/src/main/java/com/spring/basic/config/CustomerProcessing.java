@@ -14,6 +14,11 @@ public class CustomerProcessing implements ItemProcessor<Customer, Customer> {
 	@Override
 	public Customer process(Customer item) throws Exception {
 		// TODO Auto-generated method stub
+//		if(item.country.equals("China")) {
+//			return item;
+//		}else {
+//			return null;
+//		}
 		return item;
 	}
 

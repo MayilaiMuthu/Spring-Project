@@ -2,6 +2,8 @@ package com.spring.basic.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -23,7 +25,10 @@ import lombok.NoArgsConstructor;
 @Builder
 public class Customer {
 
+	// spring.batch.job.enabled=false add application.properties
+
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "CUSTOMER_ID")
 	public Integer id;
 	@Column(name = "FIRST_NAME")
