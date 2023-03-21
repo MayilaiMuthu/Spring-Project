@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "8f0c5144-4c52-4575-9bb9-ad3fbc317d47",
+		"name": "Spring_Batch_Error",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health_Check",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7074/api/spring-batch-error/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7074",
+					"path": [
+						"api",
+						"spring-batch-error",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7074/api/spring-batch-error/csv-import",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7074",
+					"path": [
+						"api",
+						"spring-batch-error",
+						"csv-import"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
