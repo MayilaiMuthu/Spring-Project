@@ -15,12 +15,11 @@ import lombok.NoArgsConstructor;
  *
  */
 @Entity
-@Table(name = "CUSTOMERS_INFO_ERROR")
+@Table(name = "CUSTOMER_INFO_ERROR")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Customer {
-
     @Id
     @Column(name = "CUSTOMER_ID")
     private int id;
@@ -38,6 +37,6 @@ public class Customer {
     private String country;
     @Column(name = "DOB")
     private String dob;
-
-
+    @Column(name = "AGE")
+    private int age;
 }

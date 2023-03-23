@@ -5,7 +5,7 @@
 spring:
    batch:
        jdbc:
-          initialize-schema: ALWAYS
+          initialize-schema: embedded
        job:
          enabled: false
    datasource:
