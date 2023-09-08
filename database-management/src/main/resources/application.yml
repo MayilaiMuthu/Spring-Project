@@ -1,0 +1,35 @@
+#/** * @author MayilaiMuthu * @apiNote 19-01-2023 **/
+
+#Data Source Config
+
+spring:
+   liquibase:
+       change-log: classpath:/db/changelog/db.changelog-master.yaml
+   datasource:
+       driver-class-name: com.mysql.cj.jdbc.Driver
+       url: jdbc:mysql://localhost/liquibase
+       username: root
+       password: root
+       
+#Console Config
+
+   h2:
+    console:
+      enabled: true  
+       
+#JPA Config
+
+   jpa:
+      show-sql: true
+#      hibernate:
+#         ddl-auto: update
+      properties:
+         hibernate:
+             dialect: org.hibernate.dialect.MySQL5Dialect
+             
+#Server Config             
+
+server:
+    port: 8081
+    servlet:
+      context-path: /db

@@ -1,0 +1,10 @@
+-- liquibase formatted sql
+
+-- changeset muthu:3
+INSERT INTO TEST_TABLE (TEST_COLUMN, BIRTH_DATE) 
+VALUES ('123', TO_DATE('2000-01-15', 'YYYY-MM-DD'));
+
+
+-- changeset muthu:4
+INSERT INTO TEST_TABLE (TEST_COLUMN, BIRTH_DATE) 
+VALUES ('124', TO_DATE('2001-01-16', 'YYYY-MM-DD'));
