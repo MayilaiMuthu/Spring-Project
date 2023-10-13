@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: classpath:/db/changelog/tenant1/sprint1/sprint1-master-changelog.yaml
+#  - include:
+#      file: classpath:/db/changelog/tenant1/sprint2/sprint2-master-changelog.yaml

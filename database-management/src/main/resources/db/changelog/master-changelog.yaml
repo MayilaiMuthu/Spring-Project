@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: classpath:/db/changelog/tenant1/tenant1-master-changelog.yaml
+#  - include:
+#      file: classpath:/db/changelog/tenant2/tenant2-master-changelog.yaml

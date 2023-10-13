@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: classpath:/db/changelog/tenant1/sprint1/001-db-changelog.sql
+  - include:
+      file: classpath:/db/changelog/tenant1/sprint1/002-db-changelog.sql

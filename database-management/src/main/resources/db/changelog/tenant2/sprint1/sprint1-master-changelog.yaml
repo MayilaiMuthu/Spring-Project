@@ -1,0 +1,5 @@
+databaseChangeLog:
+  - include:
+      file: classpath:/db/changelog/tenant2/sprint1/db-changelog-muthu.sql
+#  - include:
+#      file: classpath:/db/changelog/tenant2/sprint1/db-changelog-hari.sql
