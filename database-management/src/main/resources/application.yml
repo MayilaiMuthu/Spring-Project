@@ -4,7 +4,7 @@
 
 spring:
    liquibase:
-       change-log: classpath:/db/changelog/db.changelog-master.yaml
+       change-log: classpath:/db/changelog/master-changelog.yaml
    datasource:
        driver-class-name: com.mysql.cj.jdbc.Driver
        url: jdbc:mysql://localhost/liquibase
